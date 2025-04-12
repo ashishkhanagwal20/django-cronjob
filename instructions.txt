@@ -1,0 +1,118 @@
+✅ PHASE 1: Backend Setup
+🔹 Environment Setup
+ Create virtualenv python -m venv venv
+
+ Install Django, DRF, Celery, Redis, etc.
+
+ Create Django project: django-admin startproject backend
+
+ Create app: python manage.py startapp core
+
+ Setup PostgreSQL database and connect via settings.py
+
+🔹 Install Packages
+bash
+Copy
+Edit
+pip install django djangorestframework psycopg2-binary
+pip install djangorestframework-simplejwt
+pip install celery redis django-cors-headers
+🔹 JWT Auth Setup
+ Setup login/register endpoints using simplejwt
+
+ Secure APIs with JWT
+
+ Add CORS headers for React dev
+
+✅ PHASE 2: Backend Features
+🔹 Models
+ Topic – title, description
+
+ Subscription – user, topic
+
+ EmailHistory – user, subject, content, sent_at
+
+🔹 API Endpoints
+ /api/topics/ – get all topics
+
+ /api/subscribe/ – subscribe to a topic
+
+ /api/subscriptions/ – user’s subscriptions
+
+ /api/emails/ – history of received emails
+
+ (Optional Admin) /api/topics/create/
+
+🔹 Serializers & Views
+ DRF views or ViewSets with appropriate serializers
+
+✅ PHASE 3: Scheduler + Email Logic
+🔹 Celery Setup
+ Configure celery.py in your Django project
+
+ Use Redis as broker (can install locally via brew/apt)
+
+ Start with a test task to confirm it's working
+
+🔹 Celery Beat (Periodic Task)
+ Install: pip install django-celery-beat
+
+ Schedule daily/weekly job to send email updates
+
+ Create send_newsletters() task that:
+
+Loops through all subscriptions
+
+Sends email to users
+
+Logs to EmailHistory
+
+🔹 Email Sending
+ Use Django’s send_mail with SMTP or Gmail
+
+ Use basic HTML template for email body
+
+ Log email history per user
+
+✅ PHASE 4: Frontend Setup
+🔹 React Environment
+ Setup using Vite or CRA
+
+ Tailwind CSS for UI
+
+ Axios for HTTP requests
+
+ React Router + Context API or Zustand
+
+🔹 Auth Pages
+ Login/Register using JWT
+
+ Store token in localStorage
+
+ Create AuthContext to manage user state
+
+🔹 User Dashboard
+ Show available topics
+
+ Subscribe/Unsubscribe
+
+ View past sent emails
+
+🔹 Admin Panel (Optional)
+ Add/Edit topics (if admin)
+
+✅ PHASE 5: Finishing Touches
+🔹 Final Touches
+ Secure endpoints with permissions
+
+ Add pagination (if needed)
+
+ Add loading spinners & toasts
+
+🔹 README
+ List out features
+
+ How to run backend and frontend
+
+ Screenshots / Demo Video (optional)
+

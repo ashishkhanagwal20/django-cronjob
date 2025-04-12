@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Django
+*.sqlite3
+db.sqlite3
+
+# VSCode or Cursor settings (optional)
+.vscode/
+
+# Env files
+.env
+
+# Node (for frontend later)
+frontend/node_modules/
+frontend/.env
