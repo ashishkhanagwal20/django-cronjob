@@ -116,3 +116,26 @@ Logs to EmailHistory
 
  Screenshots / Demo Video (optional)
 
+
+
+
+TODO for Tomorrow
+Frontend Development
+Set up React with Vite
+Implement authentication flow
+Create dashboard layout
+Add topic subscription management
+Display email history
+Newsletter Scheduling
+Configure Celery Beat
+Set up daily newsletter schedule
+Add user timezone preferences
+Additional Features
+Custom email templates
+User preferences
+Analytics dashboard
+Rich text newsletter content
+Testing & Documentation
+Add unit tests
+Write API documentation
+Create user guide
